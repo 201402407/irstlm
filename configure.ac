@@ -7,7 +7,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 m4_pattern_allow([AM_PROG_AR],[AM_PROG_AR])
-AM_PROG_AR
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 
 AC_ARG_ENABLE([doc],
    [AC_HELP_STRING([--enable-doc|--disable-doc], [Enable or Disable (default) creation of documentation])])
